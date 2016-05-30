@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Flex Dashboard - First Try\"\noutput: \n  flexdashboard::flex_dashboard:\n    orientation: columns\n    vertical_layout: fill\n    \n---\n\n```{r setup, include=FALSE}\ninstall.packages(\"SportsAnalytics\")\ninstall.packages(\"plotly\")\nlibrary(flexdashboard)\nlibrary(SportsAnalytics) \nlibrary(ggplot2)\nlibrary(plotly)\nNBA1516<-fetch_NBAPlayerStatistics('15-16')\n```\n\nColumn\n-----------------------------------------------------------------------\n\n### Chart A\n\n```{r}\np<-ggplot(NBA1516)+geom_point(aes(x=TotalPoints,y=TotalMinutesPlayed))\nggplotly(p)\n```\n\n",
+    "created" : 1464591559827.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "568455439",
+    "id" : "7A1A0700",
+    "lastKnownWriteTime" : 1464598370,
+    "last_content_update" : 1464598370394,
+    "path" : "C:/Users/CGU/Desktop/R0530/FD-Try.Rmd",
+    "project_path" : "FD-Try.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
